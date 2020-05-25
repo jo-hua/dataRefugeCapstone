@@ -1,15 +1,9 @@
 {
   "$id": "",
-  "$schema": [
-    "http://json-schema.org/draft-07/schema#",
-    "https://eml.ecoinformatics.org/eml-2.2.0",
-    "https://www.w3.org/ns/prov",
-    "https://www.dublincore.org/specifications/dublin-core/dcmi-terms/",
-    "https://www.w3.org/TR/vocab-dcat-2/"
-  ],
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
   "title": "The Data Refuge Schema",
-  "description": "This JSON document specifies the Data Refuge extensible schema, based on properties defined by Dublin Core, EML, PROV, and DCAT.",
+  "description": "This JSON document specifies the Data Refuge extensible schema, based on properties defined by Dublin Core, EML, PROV, DCAT, and the Project Open Data Metadata Schema v1.1.",
   "additionalProperties": true,
   "required": [
     "$schema",
@@ -43,43 +37,44 @@
       "description": "A name given to the resource.",
       "conformsTo": "http://projectopendata.placeholder.gov/v1.1/schema",
       "describedBy": "http://projectopendata.placeholder.gov/v1.1/schema/catalog.json",
-      "default": "",
       "examples": ["Lake Ecosystem Services"]
     },
     "identifier": {
       "type": "string",
       "description": "Assign a sequence specific to this collection to be retained in new platform.",
-      "conformsTo": "http://purl.org/dc/elements/1.1/",
-      "default": "",
+      "conformsTo": "http://projectopendata.placeholder.gov/v1.1/schema",
+      "describedBy": "http://projectopendata.placeholder.gov/v1.1/schema/catalog.json",
       "examples": ["{dataRefugeEpa01}"]
     },
     "packageId": {
       "type": "string",
-      "title": "The PackageId Schema",
       "description": "Use the existing `package id` in the data-level Additional Information on CKAN.",
-      "default": "",
+      "conformsTo": "https://eml.ecoinformatics.org/eml-2.2.0",
       "examples": ["{6eaf3277-8839-46bc-a418-6ac239251a63}"]
     },
     "date": {
       "type": "string",
       "format": "date",
-      "title": "purl.org/dc/elements/1.1/date",
+      "conformsTo": "http://purl.org/dc/elements/1.1/",
       "description": "Record date harvested according to what shows up in Data Catalog.",
-      "default": "",
       "examples": ["2017-05-19"]
+    },
+    "format": {
+      "type": "string",
+      "description": "The file format, physical medium, or dimensions of the resource.",
+      "conformsTo": "http://purl.org/dc/elements/1.1/",
+      "examples": ["zip", "csv", "pdf", "xml"]
     },
     "extent": {
       "type": "string",
-      "title": "The Extent Schema",
       "description": "The size or duration of the resource.",
-      "default": "",
+      "conformsTo": "http://purl.org/dc/terms",
       "examples": ["649 KB"]
     },
     "dataType": {
       "type": "string",
       "description": "It is recommended that the value of the property is taken from a well governed and broadly recognized set of resource types, such as the DCMI Type Vocabulary [DCTERMS], the MARC Genre/Terms Scheme, the [ISO-19115-1] MD_Scope codes, the DataCite resource types, or the PARSE.Insight content-types from Re3data.",
       "conformsTo": "http://www.w3.org/ns/dcat#",
-      "default": "",
       "examples": [
         "Dataset",
         "Collection",
@@ -91,17 +86,16 @@
     },
     "description": {
       "type": "string",
-      "title": "The Description Schema",
       "description": "Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource.",
-      "default": "",
+      "conformsTo": "http://purl.org/dc/elements/1.1/",
       "examples": [
         "The Lakes Ecosystem Services Online GIS provides geospatial visualization, query, and analysis tool on the types of benefits provided by lakes, ponds, and reservoirs. The data in this dataset is used by the website to provide access to lakes monitoring data, modeled nutrient fluxes, state specific data sets analytical tools and scripts for exploring associations between nutrients and lake ecosystem services, tools for mapping lake ecosystem services."
       ]
     },
     "subject": {
       "type": "array",
+      "conformsTo": "http://purl.org/dc/elements/1.1/",
       "description": "Assign only controlled keywords from the taxonomy we created; retain the existing folksonomy as `tags`.",
-      "default": [],
       "items": {
         "type": "string",
         "examples": [["EPA", "geospatial", "Inland Water Resources"]]
@@ -147,24 +141,25 @@
     },
     "wasDerivedFrom": {
       "type": "array",
-      "description": "A derivation is a transformation of an entity into another, an update of an entity resulting in a new one, or the construction of a new entity based on a pre-existing entity.",
+      "description": "Include links to the mirrored or source entity on open data portals such as data.gov and edg.epa.gov. A derivation is a transformation of an entity into another, an update of an entity resulting in a new one, or the construction of a new entity based on a pre-existing entity.",
       "conformsTo": "http://www.w3.org/ns/prov#",
-      "default": [],
       "additionalItems": true,
       "items": {
         "type": "string",
         "examples": [
           [
-            "https://edg.epa.gov/metadata/rest/document?id=%7B668F7BE3-50D1-465C-A73D-B21625689159%7D",
+            "https://catalog.data.gov/dataset/national-lakes-assessment-data-122f9",
             "https://edg.epa.gov/metadata/catalog/search/resource/details.page?uuid=%7B668F7BE3-50D1-465C-A73D-B21625689159%7D"
           ]
         ]
-      }
+      },
+      "minItems": 1,
+      "uniqueItems": true
     },
     "collection": {
       "type": "string",
-      "title": "The Collection Schema",
       "description": "Collection name within a repository.",
+      "conformsTo": "http://www.w3.org/ns/prov#",
       "default": "Data Refuge",
       "examples": [
         "Data Refuge",
@@ -174,8 +169,9 @@
     },
     "license": {
       "type": "string",
-      "title": "The License Schema",
-      "description": "An explanation about the purpose of this instance.",
+      "description": "Catalog according to the license shown for each data object on datarefuge.org/dataset. Most of them should have the open data license",
+      "conformsTo": "http://projectopendata.placeholder.gov/v1.1/schema",
+      "describedBy": "http://projectopendata.placeholder.gov/v1.1/schema/catalog.json",
       "default": "https://opendefinition.org/od/2.1/en/"
     }
   }
