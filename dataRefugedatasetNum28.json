@@ -1,0 +1,193 @@
+{
+  "$id": "",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "The Data Refuge Schema",
+  "description": "The Data Refuge Schema comprises the entire JSON document.",
+  "default": {},
+  "additionalProperties": true,
+  "required": [
+    "@type",
+    "title",
+    "identifier",
+    "packageId",
+    "date",
+    "format",
+    "extent",
+    "dataType",
+    "description",
+    "subject",
+    "geographicCoverage",
+    "temporalCoverage",
+    "organization",
+    "wasDerivedFrom",
+    "collection",
+    "license"
+  ],
+  "properties": {
+    "@type": {
+      "type": "string",
+      "title": "The @type Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "dcat:Dataset"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "title": "The Title Schema",
+      "description": "A name given to the resource.",
+      "default": "",
+      "examples": [
+        "Lake Ecosystem Services"
+      ]
+    },
+    "identifier": {
+      "type": "string",
+      "title": "The Identifier Schema",
+      "description": "Assign a sequence specific to this collection to be retained in new platform.",
+      "default": "",
+      "examples": [
+        "{dataRefugeEpa01}"
+      ]
+    },
+    "packageId": {
+      "type": "string",
+      "title": "The PackageId Schema",
+      "description": "Use the existing `package id` in the data-level Additional Information on CKAN.",
+      "default": "",
+      "examples": [
+        "{6eaf3277-8839-46bc-a418-6ac239251a63}"
+      ]
+    },
+    "date": {
+      "type": "string",
+      "format: "date",
+      "title": "The Issued Schema",
+      "description": "Record date harvested according to what shows up in Data Catalog.",
+      "default": "",
+      "examples": [
+        "2017-05-19"
+      ]
+    },
+    "extent": {
+      "type": "string",
+      "title": "The Extent Schema",
+      "description": "The size or duration of the resource.",
+      "default": "",
+      "examples": [
+        "649 KB"
+      ]
+    },
+    "dataType": {
+      "type": "string",
+      "title": "The DataType Schema",
+      "description": "It is recommended that the value of the property is taken from a well governed and broadly recognized set of resource types, such as the DCMI Type Vocabulary [DCTERMS], the MARC Genre/Terms Scheme, the [ISO-19115-1] MD_Scope codes, the DataCite resource types, or the PARSE.Insight content-types from Re3data.",
+      "default": "",
+      "examples": [
+        "Dataset",
+        "Collection",
+        "Text",
+        "InteractiveResource",
+        "Database",
+        "Application"
+      ]
+    },
+    "description": {
+      "type": "string",
+      "title": "The Description Schema",
+      "description": "Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource.",
+      "default": "",
+      "examples": [
+        "The Lakes Ecosystem Services Online GIS provides geospatial visualization, query, and analysis tool on the types of benefits provided by lakes, ponds, and reservoirs. The data in this dataset is used by the website to provide access to lakes monitoring data, modeled nutrient fluxes, state specific data sets analytical tools and scripts for exploring associations between nutrients and lake ecosystem services, tools for mapping lake ecosystem services."
+      ]
+    },
+    "subject": {
+      "type": "array",
+      "description": "Assign only controlled keywords from the taxonomy we created; retain the existing folksonomy as `tags`.",
+      "default": [],
+      "additionalItems": true,
+      "items": {
+        "type": "string",
+        "examples": [[
+          "clean water act",
+          "lakes",
+          "nla"
+        ]]
+      }
+    },
+    "geographicCoverage": {
+      "title": "The Spatial Schema",
+      "description": "Geographic Coverage is a container for spatial information about a project, a resource, or an entity within a resource. It allows a bounding box for the overall coverage (in lat long), and also allows description of arbitrary polygons with exclusions.",
+      "required": [ "latitude", "longitude" ],
+      "type": "object",
+      "properties": {
+        "latitude": {
+          "type": "number",
+          "minimum": -90,
+          "maximum": 90
+        },
+        "longitude": {
+          "type": "number",
+          "minimum": -180,
+          "maximum": 180
+        }
+      }
+    },
+    "temporalCoverage": {
+      "type": "array",
+      "title": "The TemporalCoverage Schema",
+      "description": "This field specifies temporal coverage, and allows coverages to be a single point in time, multiple points in time, or a range of dates. Dates can be expressed in terms of both calendar dates and geologic dating systems.",
+      "default": [],
+      "additionalItems": true,
+      "items": {
+        "type": "integer",
+	"minimum": 1900,
+	"exclusiveMaximum": 2500,
+        "examples": [[
+          "2007",
+          "2019"
+        ]]
+      }
+    },
+    "organization": {
+      "type": "string",
+      "description": "An organization is a social or legal institution such as a company, society, etc.",
+      "default": "United States Environmental Protection Agency",
+    },
+    "wasDerivedFrom": {
+      "type": "array",
+      "title": "The References Schema",
+      "description": "A derivation is a transformation of an entity into another, an update of an entity resulting in a new one, or the construction of a new entity based on a pre-existing entity.",
+      "default": [],
+      "additionalItems": true,
+      "items": {
+        "type": "string",
+        "examples": [
+          [
+          "https://edg.epa.gov/metadata/rest/document?id=%7B668F7BE3-50D1-465C-A73D-B21625689159%7D",
+          "https://edg.epa.gov/metadata/catalog/search/resource/details.page?uuid=%7B668F7BE3-50D1-465C-A73D-B21625689159%7D"
+          ]
+        ]
+      }
+    },
+    "collection": {
+      "type": "string",
+      "title": "The Collection Schema",
+      "description": "Collection name within a repository.",
+      "default": "Data Refuge",
+      "examples": [
+        "Data Refuge",
+        "Arnold and Deanne Kaplan Collection of Early American Judaica",
+        "Dechert Collection"
+      ]
+    },
+    "license": {
+      "type": "string",
+      "title": "The License Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "https://opendefinition.org/od/2.1/en/"
+    }
+  }
+}

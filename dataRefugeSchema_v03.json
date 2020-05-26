@@ -27,10 +27,9 @@
   "properties": {
     "@type": {
       "type": "string",
-      "title": "The @type Schema",
-      "description": "An explanation about the purpose of this instance.",
-      "default": "",
-      "examples": ["dcat:Dataset"]
+      "description": "This defines the metadata type. IRI for the JSON-LD data type.",
+      "conformsTo": "https://www.w3.org/TR/json-ld11/",
+      "default": "dcat:Dataset"
     },
     "title": {
       "type": "string",
