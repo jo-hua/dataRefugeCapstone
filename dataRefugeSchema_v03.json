@@ -59,10 +59,15 @@
       "examples": ["2017-05-19"]
     },
     "format": {
-      "type": "string",
+      "type": "array",
       "description": "The file format, physical medium, or dimensions of the resource.",
       "conformsTo": "http://purl.org/dc/elements/1.1/",
-      "examples": ["zip", "csv", "pdf", "xml"]
+      "items": {
+        "type": "string",
+        "examples": [["zip", "csv", "pdf", "xml"]]
+      },
+      "minItems": 1,
+      "uniqueItems": true
     },
     "extent": {
       "type": "string",
