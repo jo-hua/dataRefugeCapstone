@@ -1,0 +1,18 @@
+{
+    "@type": "dcat:Dataset",
+    "title": "Lake Ecosystem Services",
+    "identifier": "dataRefugeEpa35",
+    "packageId": "6eaf3277-8839-46bc-a418-6ac239251a63",
+    "date": "2017-05-19",
+    "format": ["txt", "csv", "pdf", "json"],
+    "extent" ,
+    "dataType",
+    "description",
+    "subject",
+    "geographicCoverage",
+    "temporalCoverage",
+    "organization",
+    "wasDerivedFrom",
+    "collection",
+    "license"
+}
