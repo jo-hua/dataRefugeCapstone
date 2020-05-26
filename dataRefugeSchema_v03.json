@@ -43,13 +43,13 @@
       "description": "Assign a sequence specific to this collection to be retained in new platform.",
       "conformsTo": "http://projectopendata.placeholder.gov/v1.1/schema",
       "describedBy": "http://projectopendata.placeholder.gov/v1.1/schema/catalog.json",
-      "examples": ["{dataRefugeEpa01}"]
+      "examples": ["dataRefugeEpa01"]
     },
     "packageId": {
       "type": "string",
       "description": "Use the existing `package id` in the data-level Additional Information on CKAN.",
       "conformsTo": "https://eml.ecoinformatics.org/eml-2.2.0",
-      "examples": ["{6eaf3277-8839-46bc-a418-6ac239251a63}"]
+      "examples": ["6eaf3277-8839-46bc-a418-6ac239251a63"]
     },
     "date": {
       "type": "string",
