@@ -11,9 +11,20 @@
   "subject": [
     "EPA",
     "TRI",
-    "CHIP", "OPP", "ATSDR", "Cal/EPA", "NTP", "IARC", "IRIS", "chemical", "pollutant"
+    "CHIP",
+    "OPP",
+    "ATSDR",
+    "Cal/EPA",
+    "NTP",
+    "IARC",
+    "IRIS",
+    "chemical",
+    "pollutant"
   ],
-  "geographicCoverage": { "latitude": {-66.0, 72.0}, "longitude": {-180,18.0} },
+  "geographicCoverage": {
+    "latitude": [-66.0, 72.0],
+    "longitude": [-180.0, 18.0]
+  },
   "temporalCoverage": "",
   "organization": "United States Environmental Protection Agency",
   "wasDerivedFrom": [
