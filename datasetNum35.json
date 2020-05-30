@@ -8,15 +8,12 @@
   "extent": "649 KB",
   "dataType": "Dataset",
   "description": "The Lakes Ecosystem Services Online GIS provides geospatial visualization, query, and analysis tool on the types of benefits provided by lakes, ponds, and reservoirs. The data in this dataset is used by the website to provide access to lakes monitoring data, modeled nutrient fluxes, state specific data sets analytical tools and scripts for exploring associations between nutrients and lake ecosystem services, tools for mapping lake ecosystem services.",
-  "subject": [
-    "EPA",
-    "NLA",
-    "geospatial",
-    "visualization",
-    "Inland Water Resources"
-  ],
-  "geographicCoverage": { "latitude": -66.0, "longitude": -180 },
-  "temporalCoverage": "",
+  "subject": ["EPA", "Inland Water Resources", "Ecosystems"],
+  "geographicCoverage": {
+    "latitude": [-66.0, 72.0],
+    "longitude": [-180.0, 18.0]
+  },
+  "temporalCoverage": [2007, 2008, 2009],
   "organization": "United States Environmental Protection Agency",
   "wasDerivedFrom": [
     "https://archive.epa.gov/aed/lakesecoservices/web/html/",
