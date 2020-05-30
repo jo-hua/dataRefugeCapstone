@@ -6,22 +6,21 @@
   "description": "This JSON document specifies the Data Refuge extensible schema, based on properties defined by Dublin Core, EML, PROV, DCAT, and the Project Open Data Metadata Schema v1.1.",
   "additionalProperties": true,
   "required": [
-    "$schema",
     "@type",
-    "title",
-    "identifier",
-    "packageId",
-    "date",
-    "format",
-    "extent",
-    "dataType",
-    "description",
-    "subject",
-    "temporalCoverage",
-    "organization",
-    "wasDerivedFrom",
-    "collection",
-    "license"
+    "dc:title",
+    "dc:identifier",
+    "eml:packageId",
+    "dc:date",
+    "dc:format",
+    "dct:extent",
+    "dcat:dataType",
+    "dc:description",
+    "dc:subject",
+    "eml:temporalCoverage",
+    "prov:organization",
+    "prov:wasDerivedFrom",
+    "prov:collection",
+    "dct:license"
   ],
   "properties": {
     "@type": {
@@ -30,35 +29,40 @@
       "conformsTo": "https://www.w3.org/TR/json-ld11/",
       "default": "dcat:Dataset"
     },
-    "title": {
+    "dc:title": {
       "type": "string",
+      "title": "title",
       "description": "A name given to the resource.",
       "conformsTo": "http://projectopendata.placeholder.gov/v1.1/schema",
       "describedBy": "http://projectopendata.placeholder.gov/v1.1/schema/catalog.json",
       "examples": ["Lake Ecosystem Services"]
     },
-    "identifier": {
+    "dc:identifier": {
       "type": "string",
+      "title": "identifier",
       "description": "Assign a sequence specific to this collection to be retained in new platform.",
       "conformsTo": "http://projectopendata.placeholder.gov/v1.1/schema",
       "describedBy": "http://projectopendata.placeholder.gov/v1.1/schema/catalog.json",
       "examples": ["dataRefugeEpa01"]
     },
-    "packageId": {
+    "eml:packageId": {
       "type": "string",
+      "title": "packageId",
       "description": "Use the existing `package id` in the data-level Additional Information on CKAN.",
       "conformsTo": "https://eml.ecoinformatics.org/eml-2.2.0",
       "examples": ["6eaf3277-8839-46bc-a418-6ac239251a63"]
     },
-    "date": {
+    "dc:date": {
       "type": "string",
+      "title": "date",
+      "description": "Record date harvested according to what shows up in Data Catalog.",
       "format": "date",
       "conformsTo": "http://purl.org/dc/elements/1.1/",
-      "description": "Record date harvested according to what shows up in Data Catalog.",
       "examples": ["2017-05-19"]
     },
-    "format": {
+    "dc:format": {
       "type": "array",
+      "title": "format",
       "description": "The file format, physical medium, or dimensions of the resource.",
       "conformsTo": "http://purl.org/dc/elements/1.1/",
       "items": {
@@ -68,14 +72,16 @@
       "minItems": 1,
       "uniqueItems": true
     },
-    "extent": {
+    "dct:extent": {
       "type": "string",
+      "title": "extent",
       "description": "The size or duration of the resource.",
       "conformsTo": "http://purl.org/dc/terms",
       "examples": ["649 KB"]
     },
-    "dataType": {
+    "dcat:dataType": {
       "type": "string",
+      "title": "dataType",
       "description": "It is recommended that the value of the property is taken from a well governed and broadly recognized set of resource types, such as the DCMI Type Vocabulary [DCTERMS], the MARC Genre/Terms Scheme, the [ISO-19115-1] MD_Scope codes, the DataCite resource types, or the PARSE.Insight content-types from Re3data.",
       "conformsTo": "http://www.w3.org/ns/dcat#",
       "examples": [
@@ -87,27 +93,30 @@
         "Application"
       ]
     },
-    "description": {
+    "dc:description": {
       "type": "string",
+      "title": "description",
       "description": "Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource.",
       "conformsTo": "http://purl.org/dc/elements/1.1/",
       "examples": [
         "The Lakes Ecosystem Services Online GIS provides geospatial visualization, query, and analysis tool on the types of benefits provided by lakes, ponds, and reservoirs. The data in this dataset is used by the website to provide access to lakes monitoring data, modeled nutrient fluxes, state specific data sets analytical tools and scripts for exploring associations between nutrients and lake ecosystem services, tools for mapping lake ecosystem services."
       ]
     },
-    "subject": {
+    "dc:subject": {
       "type": "array",
       "conformsTo": "http://purl.org/dc/elements/1.1/",
+      "title": "subject",
       "description": "Assign only controlled keywords from the taxonomy we created; retain the existing folksonomy as `tags`.",
       "items": {
         "type": "string",
-        "examples": [["EPA", "geospatial", "Inland Water Resources"]]
+        "examples": [["EPA", "GHGRP"]]
       },
       "minItems": 1,
       "uniqueItems": true
     },
-    "geographicCoverage": {
+    "eml:geographicCoverage": {
       "description": "Geographic Coverage is a container for spatial information about a project, a resource, or an entity within a resource. It allows a bounding box for the overall coverage (in lat long), and also allows description of arbitrary polygons with exclusions.",
+      "title": "geographicCoverage",
       "conformsTo": "https://eml.ecoinformatics.org/eml-2.2.0",
       "required": ["latitude", "longitude"],
       "type": "object",
@@ -132,8 +141,9 @@
         }
       }
     },
-    "temporalCoverage": {
+    "eml:temporalCoverage": {
       "type": "array",
+      "title": "temporalCoverage",
       "description": "This field specifies temporal coverage, and allows coverages to be a single point in time, multiple points in time, or a range of dates. Dates can be expressed in terms of both calendar dates and geologic dating systems.",
       "conformsTo": "https://eml.ecoinformatics.org/eml-2.2.0",
       "additionalItems": true,
@@ -144,14 +154,16 @@
         "examples": [[2007, 2019]]
       }
     },
-    "organization": {
+    "prov:organization": {
       "type": "string",
+      "title": "organization",
       "description": "An organization is a social or legal institution such as a company, society, etc.",
       "conformsTo": "http://www.w3.org/ns/prov#",
       "default": "United States Environmental Protection Agency"
     },
-    "wasDerivedFrom": {
+    "prov:wasDerivedFrom": {
       "type": "array",
+      "title": "wasDerivedFrom",
       "description": "Include links to the mirrored or source entity on open data portals such as data.gov and edg.epa.gov. A derivation is a transformation of an entity into another, an update of an entity resulting in a new one, or the construction of a new entity based on a pre-existing entity.",
       "conformsTo": "http://www.w3.org/ns/prov#",
       "additionalItems": true,
@@ -167,8 +179,9 @@
       "minItems": 1,
       "uniqueItems": true
     },
-    "collection": {
+    "prov:collection": {
       "type": "string",
+      "title": "collection",
       "description": "Collection name within a repository.",
       "conformsTo": "http://www.w3.org/ns/prov#",
       "default": "Data Refuge",
@@ -178,8 +191,9 @@
         "Dechert Collection"
       ]
     },
-    "license": {
+    "dct:license": {
       "type": "string",
+      "title": "license",
       "description": "Catalog according to the license shown for each data object on datarefuge.org/dataset. Most of them should have the open data license",
       "conformsTo": "http://projectopendata.placeholder.gov/v1.1/schema",
       "describedBy": "http://projectopendata.placeholder.gov/v1.1/schema/catalog.json",
