@@ -141,7 +141,7 @@
         "type": "integer",
         "minimum": 1500,
         "exclusiveMaximum": 3000,
-        "examples": [["2007", "2019"]]
+        "examples": [[2007, 2019]]
       }
     },
     "organization": {
