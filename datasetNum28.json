@@ -25,7 +25,7 @@
     "latitude": [-66.0, 72.0],
     "longitude": [-180.0, 18.0]
   },
-  "temporalCoverage": "",
+  "temporalCoverage": "2017",
   "organization": "United States Environmental Protection Agency",
   "wasDerivedFrom": [
     "https://www.epa.gov/toxics-release-inventory-tri-program/tri-chemical-hazard-information-profiles-tri-chip",
