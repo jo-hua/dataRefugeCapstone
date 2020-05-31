@@ -4,7 +4,7 @@
   "dc:identifier": "dataRefugeEpa28",
   "eml:packageId": "973e17c6-90e5-470f-8bfb-257e19fcfd8a",
   "dc:date": "2017-05-06",
-  "dc:format": ["exe", "msi", "txt", "pdf", "json"],
+  "dc:format": ["exe", "msi", "zip", "txt", "pdf", "json"],
   "dct:extent": "9.8 KB",
   "dcat:dataType": "Web capture",
   "dc:description": "TRI-CHIP allows easy access to toxicity information from multiple data sources for chemicals in the TRI list. This downloadable Microsoft Access database allows you to customize searches across a single chemical, a set of specific chemicals or a TRI chemical category of interest. \nUse this dataset to (1) search toxicity information from multiple data sources for TRI chemicals; (2) use built-in queries to identify chemicals that meet quantitative toxicity criteria, such as lowest observed adverse effect levels (LOAEL) above a specified value; (3) identify all TRI chemicals associated with a critical adverse human health effect of interest; (4) print customized chemical toxicity profile reports; and (5) readily move in and out of websites containing additional chemical toxicity information. \nHealth hazard information sources available for query are the Integrated Risk Information System (IRIS), EPA Office of Pesticide Programs Registration Documents (OPP), Agency for Toxic Substances and Disease Registry (ATSDR), California Environmental Protection Agency (Cal/EPA), National Toxicology Program - 12th Report on Carcinogens (NTP), International Agency for Research on Cancer (IARC), and TRI Federal Register Notices",
