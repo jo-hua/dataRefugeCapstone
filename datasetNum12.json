@@ -1,29 +1,25 @@
 {
   "@type": "dcat:Dataset",
-  "title": "Facilities or sites subject to environmental regulation within the Facility Registry System",
-  "identifier": "dataRefugeEpa12",
-  "packageId": "F157BFAA-B746-4623-95DF-D1C8BA855204",
-  "date": "2017-02-19",
-  "format": ["csv", "zip", "pdf", "json"],
-  "extent": "1.63 GB",
-  "dataType": "Dataset",
-  "description": "To improve public health and the environment, the EPA collects information about facilities or sites subject to environmental regulation. This page provides state comma separated value (CSV) files containing key information of all facilities and sites within the Facility Registry System (FRS). Each state zip file archive combines multiple CSV files of facility name and addresses, geospatial locations, facility interests, organizations, industrial classifications (SIC and NAICS), alternative facility names, contacts, and facility mailing addresses. Complete documentation of the CSV file is included within the zip archive.",
-  "subject": [
-    "EPA",
-    "FRS",
-    "NAICS"
-  ],
-  "geographicCoverage": {
+  "dc:title": "Facilities or sites subject to environmental regulation within the Facility Registry System",
+  "dc:identifier": "dataRefugeEpa12",
+  "eml:packageId": "F157BFAA-B746-4623-95DF-D1C8BA855204",
+  "dc:date": "2017-02-19",
+  "dc:format": ["csv", "zip", "pdf", "json"],
+  "dct:extent": "1.63 GB",
+  "dcat:dataType": "Dataset",
+  "dc:description": "To improve public health and the environment, the EPA collects information about facilities or sites subject to environmental regulation. This page provides state comma separated value (CSV) files containing key information of all facilities and sites within the Facility Registry System (FRS). Each state zip file archive combines multiple CSV files of facility name and addresses, geospatial locations, facility interests, organizations, industrial classifications (SIC and NAICS), alternative facility names, contacts, and facility mailing addresses. Complete documentation of the CSV file is included within the zip archive.",
+  "dc:subject": ["EPA", "FRS", "NAICS"],
+  "eml:geographicCoverage": {
     "latitude": [-66.0, 72.0],
     "longitude": [-180.0, 18.0]
   },
-  "temporalCoverage": "2017",
-  "organization": "United States Environmental Protection Agency",
-  "wasDerivedFrom": [
+  "eml:temporalCoverage": "2017",
+  "prov:organization": "United States Environmental Protection Agency",
+  "prov:wasDerivedFrom": [
     "https://www.epa.gov/frs/epa-state-combined-csv-download-files",
     "https://catalog.data.gov/dataset/toxics-release-inventory-chemical-hazard-information-profiles-tri-chip-dataset",
     "https://edg.epa.gov/metadata/catalog/search/resource/details.page?uuid=%7B2DA57844-7EC1-4BAC-B521-3017862A1E70%7D"
   ],
-  "collection": "Data Refuge",
-  "license": "https://opendefinition.org/od/2.1/en/"
+  "prov:collection": "Data Refuge",
+  "dct:license": "https://opendefinition.org/od/2.1/en/"
 }

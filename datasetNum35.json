@@ -1,25 +1,25 @@
 {
   "@type": "dcat:Dataset",
-  "title": "Lake Ecosystem Services",
-  "identifier": "dataRefugeEpa35",
-  "packageId": "6eaf3277-8839-46bc-a418-6ac239251a63",
-  "date": "2017-05-19",
-  "format": ["txt", "csv", "pdf", "json"],
-  "extent": "649 KB",
-  "dataType": "Dataset",
-  "description": "The Lakes Ecosystem Services Online GIS provides geospatial visualization, query, and analysis tool on the types of benefits provided by lakes, ponds, and reservoirs. The data in this dataset is used by the website to provide access to lakes monitoring data, modeled nutrient fluxes, state specific data sets analytical tools and scripts for exploring associations between nutrients and lake ecosystem services, tools for mapping lake ecosystem services.",
-  "subject": ["EPA", "Inland Water Resources", "Ecosystems"],
-  "geographicCoverage": {
+  "dc:title": "Lake Ecosystem Services",
+  "dc:identifier": "dataRefugeEpa35",
+  "eml:packageId": "6eaf3277-8839-46bc-a418-6ac239251a63",
+  "dc:date": "2017-05-19",
+  "dc:format": ["txt", "csv", "pdf", "json"],
+  "dct:extent": "649 KB",
+  "dcat:dataType": "Dataset",
+  "dc:description": "The Lakes Ecosystem Services Online GIS provides geospatial visualization, query, and analysis tool on the types of benefits provided by lakes, ponds, and reservoirs. The data in this dataset is used by the website to provide access to lakes monitoring data, modeled nutrient fluxes, state specific data sets analytical tools and scripts for exploring associations between nutrients and lake ecosystem services, tools for mapping lake ecosystem services.",
+  "dc:subject": ["EPA", "CWA", "LES"],
+  "eml:geographicCoverage": {
     "latitude": [-66.0, 72.0],
     "longitude": [-180.0, 18.0]
   },
-  "temporalCoverage": [2007, 2008, 2009],
-  "organization": "United States Environmental Protection Agency",
-  "wasDerivedFrom": [
+  "eml:temporalCoverage": [2007, 2008, 2009],
+  "prov:organization": "United States Environmental Protection Agency",
+  "prov:wasDerivedFrom": [
     "https://archive.epa.gov/aed/lakesecoservices/web/html/",
     "https://catalog.data.gov/dataset/national-lakes-assessment-data-122f9",
     "https://edg.epa.gov/metadata/catalog/search/resource/details.page?uuid=%7B668F7BE3-50D1-465C-A73D-B21625689159%7D"
   ],
-  "collection": "Data Refuge",
-  "license": "https://opendefinition.org/od/2.1/en/"
+  "prov:collection": "Data Refuge",
+  "dct:license": "https://opendefinition.org/od/2.1/en/"
 }

@@ -1,29 +1,25 @@
 {
   "@type": "dcat:Dataset",
-  "title": "EPA Recovery Mapper",
-  "identifier": "dataRefugeEpa37",
-  "packageId": "724966B7-C264-4A05-89B7-0C8944AE1582",
-  "date": "2017-06-01",
-  "format": ["txt", "zip", "pdf", "json", "csv"],
-  "extent": "2.19 MB",
-  "dataType": "Dataset",
-  "description": "This map displays selected locations that have received funding from US EPA through the American Recovery and Reinvestment Act (ARRA). The placement of award locations on this map is from EPA's FRS Geospatial program and represents EPA's best estimation of recovery work locations. State-wide awards are placed at the location of the state capital. County-wide and city-wide awards are placed at the center of the county or city. For site-specific awards, a representative point within the site boundary was used. All other data comes from award recipient reported data as required by Section 1512 of the ARRA.",
-  "subject": [
-    "ARRA",
-    "EPA",
-    "FRS"
-  ],
-  "geographicCoverage": {
+  "dc:title": "EPA Recovery Mapper",
+  "dc:identifier": "dataRefugeEpa37",
+  "eml:packageId": "724966B7-C264-4A05-89B7-0C8944AE1582",
+  "dc:date": "2017-06-01",
+  "dc:format": ["txt", "zip", "pdf", "json", "csv"],
+  "dct:extent": "2.19 MB",
+  "dcat:dataType": "Dataset",
+  "dc:description": "This map displays selected locations that have received funding from US EPA through the American Recovery and Reinvestment Act (ARRA). The placement of award locations on this map is from EPA's FRS Geospatial program and represents EPA's best estimation of recovery work locations. State-wide awards are placed at the location of the state capital. County-wide and city-wide awards are placed at the center of the county or city. For site-specific awards, a representative point within the site boundary was used. All other data comes from award recipient reported data as required by Section 1512 of the ARRA.",
+  "dc:subject": ["ARRA", "EPA", "FRS"],
+  "eml:geographicCoverage": {
     "latitude": [-66.0, 72.0],
     "longitude": [-180.0, 18.0]
   },
-  "temporalCoverage": "2011",
-  "organization": "United States Environmental Protection Agency",
-  "wasDerivedFrom": [
+  "eml:temporalCoverage": "2011",
+  "prov:organization": "United States Environmental Protection Agency",
+  "prov:wasDerivedFrom": [
     "https://epamap17.epa.gov/arra/",
     "https://catalog.data.gov/dataset/epa-recovery-mapper",
     "https://edg.epa.gov/metadata/catalog/search/resource/details.page?uuid=%7BB756C475-07D8-4509-8427-E4FB3E28CBCC%7D"
   ],
-  "collection": "Data Refuge",
-  "license": "https://opendefinition.org/od/2.1/en/"
+  "prov:collection": "Data Refuge",
+  "dct:license": "https://opendefinition.org/od/2.1/en/"
 }
